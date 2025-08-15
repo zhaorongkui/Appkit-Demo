@@ -29,7 +29,7 @@
   const metadata = {
     name: "My AppKit Demo",
     description: "AppKit Vue Demo with Ethers",
-    url: "http://localhost:5173", // 本地开发地址，需与浏览器地址一致
+    url: "http://localhost:5174", // 本地开发地址，需与浏览器地址一致
     icons: ["https://picsum.photos/200/200"], // 可选：替换为你的图标地址
   };
 
@@ -37,8 +37,8 @@
   createAppKit({
     adapters: [new EthersAdapter()], // 使用 Ethers 适配器
     networks: [mainnet, arbitrum, sepolia], // 支持的网络（主网、Arbitrum、测试网）
-    metadata,
-    projectId,
+    metadata, // 应用元数据（会显示在钱包连接弹窗中）
+    projectId, // 项目id
     features: {
       analytics: true, // 可选：启用分析功能
     },
